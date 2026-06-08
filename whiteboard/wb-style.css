@@ -1,0 +1,345 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Syne:wght@400;500;600;700&display=swap');
+
+:root {
+    --bg: #07111f;
+    --bg-2: #0b1828;
+    --bg-card: #102035;
+    --border: rgba(120,170,255,0.1);
+    --border-hover: rgba(120,170,255,0.24);
+    --text: #e8f0fc;
+    --text-muted: #6a84a8;
+    --text-dim: #2e4460;
+    --accent: #c9a84c;
+    --accent-blue: #5b9fdf;
+    --danger: #8b2020;
+    --danger-hover: #c0392b;
+    --radius: 2px;
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Syne', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 48px 52px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image:
+        radial-gradient(ellipse 70% 45% at 50% 0%, rgba(30,90,180,0.2) 0%, transparent 70%),
+        radial-gradient(ellipse 35% 25% at 85% 85%, rgba(20,60,130,0.1) 0%, transparent 60%),
+        url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+}
+
+/* ── HEADER ── */
+.wb-header {
+    width: 100%;
+    max-width: 960px;
+    margin-bottom: 32px;
+    padding-bottom: 28px;
+    border-bottom: 1px solid var(--border);
+}
+
+.badge {
+    display: inline-block;
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 14px;
+    padding: 5px 12px;
+    border: 1px solid rgba(201,168,76,0.25);
+    border-radius: 20px;
+    background: rgba(201,168,76,0.05);
+}
+
+h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.6rem;
+    font-weight: 300;
+    letter-spacing: -0.01em;
+    line-height: 1.1;
+    color: var(--text);
+    margin-bottom: 6px;
+}
+
+.wb-subtitle {
+    font-size: 13px;
+    color: var(--text-muted);
+    letter-spacing: 0.03em;
+}
+
+/* ── TOOLBAR ── */
+.toolbar {
+    width: 100%;
+    max-width: 960px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    padding: 14px 24px;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 6px 16px;
+    margin-bottom: 20px;
+}
+
+.toolbar-group {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-right: 16px;
+    border-right: 1px solid var(--border);
+}
+
+.toolbar-group:last-child {
+    border-right: none;
+    padding-right: 0;
+}
+
+.toolbar label {
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+}
+
+input[type="color"] {
+    -webkit-appearance: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: none;
+    padding: 0;
+}
+input[type="color"]::-webkit-color-swatch-wrapper { padding: 0; }
+input[type="color"]::-webkit-color-swatch {
+    border: 2px solid var(--border-hover);
+    border-radius: 50%;
+    transition: border-color 0.2s;
+}
+input[type="color"]:hover::-webkit-color-swatch { border-color: var(--accent); }
+
+input[type="range"] {
+    cursor: pointer;
+    accent-color: var(--accent);
+    width: 110px;
+    height: 3px;
+}
+
+/* ── BUTTONS ── */
+button {
+    padding: 9px 16px;
+    border: 1px solid transparent;
+    border-radius: var(--radius);
+    font-family: 'Syne', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    color: var(--text-muted);
+    border-color: var(--border);
+}
+
+button:hover {
+    transform: translateY(-1px);
+    color: var(--text);
+    border-color: var(--border-hover);
+    background: rgba(255,255,255,0.04);
+}
+
+#eraserBtn {
+    border-color: rgba(201,168,76,0.3);
+    color: var(--accent);
+    background: rgba(201,168,76,0.05);
+}
+#eraserBtn:hover {
+    border-color: var(--accent);
+    background: rgba(201,168,76,0.1);
+}
+
+#clearBtn {
+    border-color: rgba(139,32,32,0.3);
+    color: #a04040;
+}
+#clearBtn:hover {
+    border-color: var(--danger-hover);
+    color: var(--danger-hover);
+    background: rgba(139,32,32,0.08);
+}
+
+#saveBtn {
+    border-color: rgba(91,159,223,0.35);
+    color: var(--accent-blue);
+    background: rgba(91,159,223,0.05);
+}
+#saveBtn:hover {
+    border-color: var(--accent-blue);
+    background: rgba(91,159,223,0.1);
+}
+
+.active-eraser {
+    border-color: var(--danger-hover) !important;
+    color: var(--danger-hover) !important;
+    background: rgba(192,57,43,0.1) !important;
+}
+
+/* ── CANVAS ── */
+canvas {
+    background: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 24px 60px rgba(0,0,0,0.6), 0 0 0 1px var(--border);
+    touch-action: none;
+    max-width: 960px;
+    width: 100%;
+    cursor: url('marker.png') 4 28, crosshair;
+}
+
+/* ── FOOTER ── */
+footer {
+    margin-top: 28px;
+    font-size: 11px;
+    color: var(--text-dim);
+    text-align: center;
+    line-height: 1.8;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+}
+
+/* ── PDF & MAIL BUTTONS ── */
+#savePdfBtn {
+    border-color: rgba(91,159,223,0.35);
+    color: var(--accent-blue);
+    background: rgba(91,159,223,0.05);
+}
+#savePdfBtn:hover {
+    border-color: var(--accent-blue);
+    background: rgba(91,159,223,0.1);
+}
+
+#sendEmailBtn {
+    border-color: rgba(201,168,76,0.3);
+    color: var(--accent);
+    background: rgba(201,168,76,0.05);
+}
+#sendEmailBtn:hover {
+    border-color: var(--accent);
+    background: rgba(201,168,76,0.1);
+}
+
+/* ── EMAIL OVERLAY / POPUP ── */
+.overlay {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.82);
+    backdrop-filter: blur(8px);
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.2s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+.popup-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border-hover);
+    padding: 36px 40px;
+    border-radius: 6px;
+    max-width: 440px;
+    width: 90%;
+    box-shadow: 0 32px 80px rgba(0,0,0,0.6);
+    animation: slideUp 0.25s ease;
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(16px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.popup-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 8px;
+    color: var(--text);
+}
+
+.popup-box p {
+    color: var(--text-muted);
+    font-size: 13px;
+    margin-bottom: 24px;
+    line-height: 1.6;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: var(--radius);
+    border: 1px solid var(--border-hover);
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Syne', sans-serif;
+    font-size: 13px;
+    margin-bottom: 24px;
+    transition: border-color 0.2s;
+    outline: none;
+}
+.input-group input:focus { border-color: var(--accent-blue); }
+.input-group input::placeholder { color: var(--text-dim); }
+
+.popup-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+
+.popup-buttons button {
+    padding: 9px 16px;
+    border: 1px solid transparent;
+    border-radius: var(--radius);
+    font-family: 'Syne', sans-serif;
+    font-weight: 500;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: transparent;
+}
+
+#popupCancelBtn {
+    border-color: rgba(139,32,32,0.3);
+    color: #a04040;
+}
+#popupCancelBtn:hover {
+    border-color: var(--danger-hover);
+    color: var(--danger-hover);
+    background: rgba(139,32,32,0.08);
+}
+
+#popupSendBtn {
+    border-color: rgba(91,159,223,0.35);
+    color: var(--accent-blue);
+    background: rgba(91,159,223,0.05);
+}
+#popupSendBtn:hover {
+    border-color: var(--accent-blue);
+    background: rgba(91,159,223,0.1);
+}
