@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Fun Zone | IT Kviz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="kviz-style.css">
+</head>
+<body>
+
+    <div class="quiz-header">
+        <span class="badge">Student Fun Zone</span>
+        <h1>IT Kviz</h1>
+        <p class="quiz-subtitle">Testirajte znanje iz web programiranja i IT tehnologija</p>
+    </div>
+
+    <div class="progress-wrap">
+        <div class="progress-meta">
+            <span class="progress-label">Napredak</span>
+            <span id="questionNumber">Pitanje 1 od 5</span>
+        </div>
+        <div class="progress-track">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+    </div>
+
+    <div class="quiz-container">
+
+        <div class="quiz-box" id="quizBox">
+            <div class="question-section">
+                <div class="question-eyebrow">Trenutno pitanje</div>
+                <h2 id="questionText">Učitavanje pitanja...</h2>
+            </div>
+
+            <div class="options-section" id="optionsContainer"></div>
+
+            <div class="quiz-footer">
+                <span class="score-inline">Bodovi: <span id="scoreLive">0</span></span>
+                <button id="nextBtn" disabled>Sljedeće →</button>
+            </div>
+        </div>
+
+        <div class="result-box" id="resultBox">
+            <div class="result-top">
+                <div class="result-eyebrow">Rezultat kviza</div>
+                <div class="score-display">
+                    <span id="scorePercent">0</span><span class="score-unit">%</span>
+                </div>
+                <p id="resultText">Odgovorili ste tačno na 0 od 5 pitanja.</p>
+            </div>
+            <div class="result-bottom">
+                <button id="restartBtn">↺ Igraj ponovo</button>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        Web programiranje 2025/2026 &nbsp;·&nbsp;
+        Internacionalna poslovno-informaciona akademija Tuzla
+    </footer>
+
+    <script src="kviz-script.js"></script>
+</body>
+</html>
