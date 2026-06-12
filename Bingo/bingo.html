@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IT Bingo Kviz</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="bingo-style.css">
+</head>
+<body>
+
+    <div class="bingo-header">
+        <span class="badge">Student Fun Zone</span>
+        <h1>IT Bingo Kviz</h1>
+        <p class="bingo-subtitle">Odgovorite na pitanja i spojite 5 pojmova za BINGO</p>
+    </div>
+
+    <div class="bingo-layout">
+
+        <!-- Lijeva kolona: pitanje + statistike + dugme -->
+        <div class="question-panel">
+            <div class="question-box idle" id="questionBox">
+                <div class="panel-label">Trenutno pitanje</div>
+                <p id="currentQuestion">Kliknite na dugme ispod da započnete kviz.</p>
+            </div>
+
+            <div class="stats-panel">
+                <div class="stat-card">
+                    <span class="stat-label">Tačni odgovori</span>
+                    <span class="stat-value" id="scoreValue">0</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Preostalo pitanja</span>
+                    <span class="stat-value" id="remainingValue">—</span>
+                </div>
+            </div>
+
+            <button id="startBtn">→ Započni igru</button>
+        </div>
+
+        <!-- Desna kolona: ploča -->
+        <div class="bingo-board-wrapper">
+            <div class="board-label">Bingo ploča</div>
+            <div class="bingo-board" id="bingoBoard"></div>
+        </div>
+
+    </div>
+
+    <footer>
+        Web programiranje 2025/2026 &nbsp;·&nbsp;
+        Internacionalna poslovno-informaciona akademija Tuzla
+    </footer>
+
+    <!-- Win overlay -->
+    <div class="overlay" id="winOverlay">
+        <div class="popup-box">
+            <div class="popup-icon">✦</div>
+            <h2>BINGO!</h2>
+            <p>Čestitamo — uspješno ste spojili liniju od 5 tačnih IT pojmova.</p>
+            <button id="restartBtn">↺ Igraj ponovo</button>
+        </div>
+    </div>
+
+    <script src="bingo-script.js"></script>
+</body>
+</html>
