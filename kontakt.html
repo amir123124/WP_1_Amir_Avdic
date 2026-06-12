@@ -34,7 +34,9 @@
         </ul>
     </nav>
 
-    <main class="main-content">
+    <main class="main-content" id="main-zona">
+        <iframe name="sadrzaj-okvir" id="sadrzajOkvir" src="about:blank" style="display:none;"></iframe>
+        <div id="pocetniSadrzaj">
         <h2>Kontakt</h2>      
         
         <div class="main-image">
@@ -60,12 +62,12 @@
             <div id="kontaktForma" style="display: flex; flex-direction: column; gap: 14px; max-width: 520px;">
                 <div style="display: flex; flex-direction: column; gap: 5px;">
                     <label for="imePolje" style="font-size: 13px; font-weight: 600; color: #1e3c72;">Vaše ime i prezime</label>
-                    <input type="text" id="imePolje" placeholder="npr. Amina Hodžić"
+                    <input type="text" id="imePolje" placeholder="npr. Ime i prezime"
                         style="padding: 10px 12px; border: 1px solid #c8d8e8; border-radius: 4px; font-size: 14px; outline: none; font-family: inherit;">
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 5px;">
                     <label for="emailPolje" style="font-size: 13px; font-weight: 600; color: #1e3c72;">Vaša e-mail adresa</label>
-                    <input type="email" id="emailPolje" placeholder="npr. amina@email.ba"
+                    <input type="email" id="emailPolje" placeholder="npr. ipia-info@gmail.com"
                         style="padding: 10px 12px; border: 1px solid #c8d8e8; border-radius: 4px; font-size: 14px; outline: none; font-family: inherit;">
                 </div>
                 <div style="display: flex; flex-direction: column; gap: 5px;">
@@ -80,6 +82,7 @@
                     ✉ Pošalji poruku
                 </button>
             </div>
+        </div>
         </div>
     </main>
     

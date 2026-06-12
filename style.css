@@ -228,7 +228,6 @@ nav {
     font-weight: 300;
     padding: 6px 0 6px 24px;
     position: relative;
-    border-bottom: 1px solid var(--surface-3);
 }
 
 .main-content ul li::before {

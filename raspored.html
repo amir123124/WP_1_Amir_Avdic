@@ -27,18 +27,20 @@
             <li class="dropdown">
                 <a href="#" class="dropbtn">Student Fun Zone ▾</a>
                 <div class="dropdown-content">
-                    <a href="Interaktivni Whiteboard/whiteboard.html" target="_blank">Interaktivni Whiteboard</a>
-                    <a href="Visual Board/visualboard.html" target="_blank">Visual Board</a>
-                    <a href="Kanban Board/index.html" target="_blank">Kanban Board</a>
-                    <a href="Bingo/bingo.html" target="_blank">Bingo</a>
-                    <a href="Kviz/kviz.html" target="_blank">Kviz</a>
+                    <a href="whiteboard/whiteboard.html" target="sadrzaj-okvir">Interaktivni Whiteboard</a>
+                    <a href="visionboard/visualboard.html" target="sadrzaj-okvir">Visual Board</a>
+                    <a href="kanban/kanban.html" target="sadrzaj-okvir">Kanban Board</a>
+                    <a href="Bingo/bingo.html" target="sadrzaj-okvir">Bingo</a>
+                    <a href="Kviz/kviz.html" target="sadrzaj-okvir">Kviz</a>
                 </div>
             </li>
         </ul>
     </nav>
 
     <!-- Sadržaj stranice rasporeda -->
-    <main class="main-content">
+    <main class="main-content" id="main-zona">
+        <iframe name="sadrzaj-okvir" id="sadrzajOkvir" src="about:blank" style="display:none;"></iframe>
+        <div id="pocetniSadrzaj">
         <h2>Raspored kurseva</h2>
         
         <div class="main-image">
@@ -46,6 +48,7 @@
         </div>
         
         <p>Objavljen je aktuelni raspored održavanja nastave i laboratorijskih vježbi za tekući mjesec.</p>
+        </div>
     </main>
     
     <footer>
