@@ -194,5 +194,9 @@ Interaktivni multiple-choice kviz iz web programiranja i IT tehnologija.
 | Google Fonts | Cormorant Garamond, Syne |
 | `mailto:` | Slanje emaila s kontakt forme i iz svih interaktivnih alata |
 
+Autor:Amir Avdić
+Broj indeksa: I-0116/23
+Predmet: Web programiranje
+Treca godina studija
 
 *© Internacionalna poslovno-informaciona akademija Tuzla — Web programiranje 2025/2026*
