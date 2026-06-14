@@ -5,13 +5,11 @@ Web aplikacija IPI Akademije razvijena u sklopu predmeta **Web programiranje**, 
 **Student:** Amir Avdić  
 **GitHub:** [WP_1_Amir_Avdic](https://github.com/amir123124/WP_1_Amir_Avdic)
 
----
 
 ## O projektu
 
 Aplikacija je izrađena korištenjem čistog **HTML5**, **CSS3** i **JavaScript-a** (bez frameworka). Sastoji se od četiri informacijske stranice i pet interaktivnih alata unutar sekcije **Student Fun Zone**, koji se otvaraju unutar iframe frameworka glavne stranice.
 
----
 
 ## Struktura projekta
 
@@ -61,7 +59,6 @@ ipi-akademija/
     └── srce.jpg
 ```
 
----
 
 ## Pokretanje projekta
 
@@ -72,6 +69,9 @@ git clone https://github.com/amir123124/WP_1_Amir_Avdic.git
 cd WP_1_Amir_Avdic
 # Otvoriti index.html u browser-u (Chrome, Firefox, Edge...)
 ```
+
+> **Napomena:** Zbog sigurnosnih ograničenja browser-a (`iframe` same-origin), preporučuje se pokretanje putem lokalnog servera (npr. Live Server ekstenzija u VS Code).
+
 
 ## Stranice i funkcionalnosti
 
@@ -92,7 +92,6 @@ Navigacijski meni (`<nav>`) se nalazi unutar `index.html` i sadrži padajući su
 2. `<iframe name="sadrzaj-okvir">` postaje vidljiv i učitava odabranu stranicu
 3. `javascript.js` automatski prilagođava visinu iframe-a visini učitanog sadržaja
 
----
 
 ## Student Fun Zone — Interaktivni alati
 
@@ -111,7 +110,6 @@ Digitalna tabla za crtanje i skiciranje bazirana na HTML5 `<canvas>` elementu.
 
 **Vanjske biblioteke:** `html2pdf.js` (CDN)
 
----
 
 ### Vision Board (`visionboard/visualboard.html`)
 
@@ -128,7 +126,6 @@ Alat za vizualno planiranje i motivaciju — slobodno raspoređivanje sadržaja 
 **Popup prozori:** popup za dodavanje slike (`#imageOverlay`) i popup za email (`#emailOverlay`)  
 **Vanjske biblioteke:** `html2pdf.js` (CDN)
 
----
 
 ### Mini Kanban Ploča (`kanban/kanban.html`)
 
@@ -149,7 +146,6 @@ Alat za organizaciju studentskih zadataka s podrškom za drag & drop.
 **Popup prozor:** `#emailOverlay` sa input poljem, dugmadima "Poništi" i "Pošalji →"  
 **Vanjske biblioteke:** `html2pdf.js`, `html2canvas` (CDN)
 
----
 
 ### IT Bingo Kviz (`Bingo/bingo.html`)
 
@@ -164,7 +160,6 @@ Kombinacija kviz pitanja i bingo ploče 5×5.
 **Prikaz:** trenutno pitanje, broj tačnih odgovora, broj preostalih pitanja  
 **Win overlay:** prikazuje se čestitka s opcijom ponovnog igranja
 
----
 
 ### IT Kviz (`Kviz/kviz.html`)
 
@@ -177,7 +172,6 @@ Interaktivni multiple-choice kviz iz web programiranja i IT tehnologija.
 - Rezultat na kraju (postotak tačnih odgovora)
 - Dugme za restart kviza
 
----
 
 ## Zajedničke karakteristike dizajna
 
@@ -187,7 +181,6 @@ Interaktivni multiple-choice kviz iz web programiranja i IT tehnologija.
 - Responzivni layout prilagođen različitim veličinama ekrana
 - Footer s copyright napomenom na svakoj stranici
 
----
 
 ## Korištene tehnologije i biblioteke
 
@@ -201,9 +194,5 @@ Interaktivni multiple-choice kviz iz web programiranja i IT tehnologija.
 | Google Fonts | Cormorant Garamond, Syne |
 | `mailto:` | Slanje emaila s kontakt forme i iz svih interaktivnih alata |
 
-Autor:Amir Avdic
-Broj indeksa:I-116/23
-Predmet: Web Programiranje
-Godina studija:Treca
 
 *© Internacionalna poslovno-informaciona akademija Tuzla — Web programiranje 2025/2026*
